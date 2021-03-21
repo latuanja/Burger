@@ -1,10 +1,11 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Eat-Da-Burger! Is a app that allows users to input the names of burgers they want to devour. After entering the burger name, it will appear on the page for devouring or to be saved.",
+  "main": "server.js",
   "scripts": {
-    "test": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
