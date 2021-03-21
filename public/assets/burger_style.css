@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(238, 230, 119);
+}
+
+img.displayed {
+    width: 10%;
+    height: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(161, 13, 13);
+}
+
+h3 {
+    text-align: center;
+    color: rgb(161, 13, 13);
+}
+
+li {
+    text-align: center;
+    padding-left: 0;
+    list-style-position: inside;
+}
