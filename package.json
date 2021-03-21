@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/latuanja/Burger.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Latuanja Carson",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/latuanja/Burger/issues"
   },
