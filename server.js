@@ -1,7 +1,7 @@
 const express = require('express');
 const PORT = process.env.PORT || 3306;
 const app = express();
-app.use(express.status('/public'));
+app.use(express.static('/public'));
 
 app.use(bodyParser.urlendcoded({
     extended: true
