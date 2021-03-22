@@ -1,7 +1,7 @@
 // import express &  burger.js
-const express = require ("express");
-const router = express.Router.Router();
-const burger = require("..models/burger.js")
+const express = require("express");
+const router = express.Router();
+const burger = require("../models/burger.js");
 
 //  Create the `router` for the app, and export the `router` at the end of your file.
 
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.posft("/api/burgers", (req, res) => {
+router.post("/api/burgers", (req, res) => {
     burger.create(
         ["burger_name", "devoured"],
         [req.body.burger_name, req.body.devoured],
@@ -26,7 +26,7 @@ router.posft("/api/burgers", (req, res) => {
 });
 
 router.put("/api/burgers/:id", (req, res) => {
-    const condition = 'id = ${req.params.id}';
+    const condition = `id = ${req.params.id}`;
     console.log("condition", condition);
 
     burger.update(

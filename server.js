@@ -1,22 +1,30 @@
 const express = require('express');
-const PORT = process.env.PORT || 3306;
 const app = express();
-app.use(express.static('/public'));
+const exphbs = require('express-handlebars');
 
-app.use(bodyParser.urlendcoded({
-    extended: true
-}))
+const dotenv = require("dotenv");
 
+dotenv.config();
+
+const PORT = process.env.PORT || 3306;
+
+app.use(express.static(__dirname + "/public"));
+
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.engine('handlebars',exphbs({
-    defaultLayout: 'main'
+
+app.engine("handlebars", exphbs({
+    defaultLayout: "main"
 }));
 
-app.set('view engine', 'handlebars');
+app.set("view engine", "handlebars");
 
-const routes = require("./controllers/burgers_controller.js")
+const routes = require("./controllers/burgers_controller.js");
 app.use(routes);
 
+
 app.listen(PORT, () =>
-console.log('Server listiening on: http://localhost:${PORT}')
+console.log(`Server listening on: http://localhost:${PORT}`)
 );
+
+// module.exports = app;
